@@ -1,6 +1,7 @@
-FROM nvidia/cuda:10.0-base
+FROM nvidia/cuda:10.0-runtime-ubuntu18.04
 
 RUN apt-get update && apt-get upgrade -y
+RUN apt-get install apt-utils -y
 RUN apt-get install libcupti-dev -y
 RUN apt-get install python3-pip -y
 RUN apt-get install libxrender-dev -y
